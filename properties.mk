@@ -144,6 +144,7 @@ dev.pm.dyn_samplingrate=1 \
 ro.hardware.egl=adreno \
 ro.opengles.version=196610 \
 vendor.display.disable_scaler=1 \
+vendor.display.disable_rotator_downscale=1 \
 vendor.gralloc.enable_fb_ubwc=1
 
 # Factory reset partition
