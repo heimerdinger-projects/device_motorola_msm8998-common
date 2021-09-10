@@ -368,6 +368,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(PLATFORM_PATH)
 
+# QCOM namepsaces
+QCOM_SOONG_NAMESPACE := \
+    $(PLATFORM_PATH)/qcom-caf
+
 # Telephony
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
