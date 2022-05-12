@@ -140,6 +140,7 @@ ro.sf.hwc_set_default_colormode=true
 
 PRODUCT_VENDOR_PROPERTIES += \
 debug.renderengine.backend=skiaglthreaded \
+debug.hwui.skia_atrace_enabled=false \
 dev.pm.dyn_samplingrate=1 \
 ro.hardware.egl=adreno \
 ro.opengles.version=196610 \
