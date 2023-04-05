@@ -156,6 +156,10 @@ PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_aosp.support=1 \
 ro.vendor.qti.va_odm.support=1
 
+# FS-verity
+PRODUCT_VENDOR_PROPERTIES += \
+ro.apk_verity.mode=2
+
 # HEH filename encryption is being dropped
 PRODUCT_VENDOR_PROPERTIES += \
 ro.crypto.volume.filenames_mode=aes-256-cts
