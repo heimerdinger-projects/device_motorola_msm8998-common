@@ -2,6 +2,11 @@
 # props to msm8998-common
 #
 
+# ART
+PRODUCT_SYSTEM_PROPERTIES += \
+dalvik.vm.dex2oat-filter=quicken \
+dalvik.vm.image-dex2oat-filter=quicken
+
 # Audio
 PRODUCT_SYSTEM_PROPERTIES += \
 use.voice.path.for.pcm.voip=false
