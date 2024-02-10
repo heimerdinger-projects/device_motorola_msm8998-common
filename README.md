@@ -5,10 +5,7 @@ Device configuration for Motorola MSM8998/SDM660 Devices
 
 Supported devices :
 
-* Motorola moto x4 (payton)
-* Motorola moto g6 plus (evert)
-* Motorola one power (chef)
-* Motorola moto z3 play (beckham)
-* Motorola moto g7 plus (lake)
-* Motorola moto z2 force (nash)
-* Motorola moto z3 (messi)
+* Motorola Moto G6 Plus (evert)
+* Motorola Moto Z3 Play (beckham)
+* Motorola Moto G7 Plus (lake)
+* Motorola Moto Z2 Force (nash)
