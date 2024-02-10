@@ -47,20 +47,23 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 LOC_HIDL_VERSION := 3.0
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/manifest.xml
+
 ifdef BOARD_USES_KEYMASTER_4
-    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/keymaster_4.xml
+    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/configs/vintf/keymaster_4.xml
 else
-    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/keymaster_3.xml
+    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/configs/vintf/keymaster_3.xml
 endif
+
 ifdef TARGET_SUPPORTS_MOTO_MODS
-    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/motomods_manifest.xml
+    DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/configs/vintf/motomods_manifest.xml
 endif
-DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(PLATFORM_PATH)/framework_manifest.xml
+
+DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/framework_manifest.xml
 TARGET_FS_CONFIG_GEN += \
-    $(PLATFORM_PATH)/config.fs \
-    $(PLATFORM_PATH)/mot_aids.fs
+    $(PLATFORM_PATH)/configs/config.fs \
+    $(PLATFORM_PATH)/configs/mot_aids.fs
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
@@ -113,7 +116,7 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
 ODM_MANIFEST_SKUS += qcril
-ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/odm_manifest_qcril.xml
+ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/configs/vintf/odm_manifest_qcril.xml
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
@@ -125,9 +128,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/public
 ifdef TARGET_SUPPORTS_MOTO_MODS
-    PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/private
-    PRODUCT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/public
-    BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/vendor
+    PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/mods/private
+    PRODUCT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/mods/public
+    BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/mods/vendor
 endif
 
 # Treble
