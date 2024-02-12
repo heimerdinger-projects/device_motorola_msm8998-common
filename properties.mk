@@ -178,6 +178,21 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.telephony.block_binder_thread_on_incoming_calls=false
 
+# Logs
+PRODUCT_PRODUCT_PROPERTIES += \
+persist.log.tag.OpenGLRenderer=S \
+persist.log.tag.AnalyticsService=S \
+persist.log.tag.KernelCpuUidActiveTimeReader=S \
+persist.log.tag.Tracer=S \
+persist.log.tag.NearbySharing=S \
+persist.log.tag.IntervalStats=S \
+persist.log.tag.CompatibilityChangeReporter=S \
+persist.log.tag.SQLiteLog=S \
+persist.log.tag.wificond=S \
+persist.log.tag.b/223498680=S \
+persist.log.tag.TrafficStats=S \
+persist.log.tag.ContrastColorUtil=S
+
 # Netflix
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.netflix.bsp_rev=Q660-13149-1
