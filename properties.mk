@@ -143,6 +143,11 @@ persist.dbg.wfc_avail_ovr=1
 PRODUCT_SYSTEM_PROPERTIES += \
 pm.sleep_mode=1
 
+# Dexopt
+PRODUCT_SYSTEM_PROPERTIES += \
+pm.dexopt.first-boot=quicken \
+pm.dexopt.bg-dexopt=everything
+
 # Display
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ro.sf.hwc_set_default_colormode=true
