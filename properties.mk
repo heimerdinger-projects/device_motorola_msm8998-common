@@ -139,6 +139,10 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1
 
+# Deep Sleep
+PRODUCT_SYSTEM_PROPERTIES += \
+pm.sleep_mode=1
+
 # Display
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ro.sf.hwc_set_default_colormode=true
