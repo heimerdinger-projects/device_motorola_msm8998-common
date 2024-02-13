@@ -216,7 +216,8 @@ ro.com.google.clientidbase.yt=android-motorola
 
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
-ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.perf-hal.ver=2.2
 
 # Radio
 PRODUCT_SYSTEM_PROPERTIES += \
