@@ -22,6 +22,8 @@
 # definition file).
 #
 
+-include vendor/custom-priv/config.mk
+
 $(call inherit-product, vendor/motorola/msm8998-common/msm8998-common-vendor.mk)
 
 # Enable updating of APEXes
